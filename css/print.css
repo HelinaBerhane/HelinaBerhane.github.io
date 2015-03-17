@@ -1,0 +1,13 @@
+/* Hide parts not needed for printing */
+
+#working_on, #about_research > *, #papers dd, #download_cv , #links, footer {
+	display: none;
+}
+
+#about_research .lead {
+	display: block;
+}
+
+a {
+	color: inherit;
+}

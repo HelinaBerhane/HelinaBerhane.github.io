@@ -1,20 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400italic,400,700);
 
-body {
-	font-family: "Roboto";
-	background: rgb(239,235,234); 
-}
-
-h1, h2, h3, h4, h5, h6 { font-style: italic; }
-
-a, a:hover, a:focus { color: rgb(220,55,85); }
-a:hover, a:focus { text-decoration: underline; }
-a:visited { color: #9E5765; }
-
-body > header {
-	background: rgb(200,50,80);
-	color: #eee;
-}
+body {font-family: "Roboto";}
 
 body > header h1 {
 	font-style: normal;
@@ -22,24 +8,7 @@ body > header h1 {
 	margin: 10px;
 }
 
-header h1 small { color: #ddd; }
-
-body > .container {
-	background-color: rgba(255, 255, 255, 0.4)
-}
-
-figure {
-	background: rgb(239,235,234);
-	padding: 10px;
-	padding-left: 10px;
-	font-style: italic;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-}
-
-figure strong {
-	font-style: normal;
-}
+h1, h2, h3, h4, h5, h6 { font-style: italic; }
 
 address ul {
 	list-style-type: none;
@@ -60,11 +29,6 @@ address ul {
 	background: url('../images/github.png');
 	background-size: 16px 16px;
 	background-repeat: no-repeat;
-}
-
-footer {
-	height: 20px;
-	background: rgba(200,50,80, 0.2)
 }
 
 p {

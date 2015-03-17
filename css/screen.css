@@ -1,0 +1,37 @@
+body {
+	background: rgb(239,235,234); 
+}
+
+
+a, a:hover, a:focus { color: rgb(220,55,85); }
+a:hover, a:focus { text-decoration: underline; }
+a:visited { color: #9E5765; }
+
+body > header {
+	background: rgb(200,50,80);
+	color: #eee;
+}
+
+header h1 small { color: #ddd; }
+
+body > .container {
+	background-color: rgba(255, 255, 255, 0.4)
+}
+
+figure {
+	background: rgb(239,235,234);
+	padding: 10px;
+	padding-left: 10px;
+	font-style: italic;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+figure strong {
+	font-style: normal;
+}
+
+footer {
+	height: 20px;
+	background: rgba(200,50,80, 0.2)
+}
