@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400italic,400,700);
+
+body {
+	font-family: "Roboto";
+	background: rgb(239,235,234); 
+}
+
+h1, h2, h3, h4, h5, h6 { font-style: italic; }
+
+a, a:hover, a:focus { color: rgb(220,55,85); }
+a:hover, a:focus { text-decoration: underline; }
+a:visited { color: #9E5765; }
+
+body > header {
+	background: rgb(200,50,80);
+	color: #eee;
+}
+
+body > header h1 {
+	font-style: normal;
+	font-weight: bold;
+	margin: 10px;
+}
+
+header h1 small { color: #ddd; }
+
+body > .container {
+	background-color: rgba(255, 255, 255, 0.4)
+}
+
+figure {
+	background: rgb(239,235,234);
+	padding: 10px;
+	padding-left: 10px;
+	font-style: italic;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+figure strong {
+	font-style: normal;
+}
+
+address ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.glyphicon {
+	margin-right: 4px;
+}
+
+.glyphicon-blank::before {
+	content: "\2212";
+	visibility: hidden;
+}
+
+.github {
+	padding-left: 22px;
+	background: url('../images/github.png');
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+}
+
+footer {
+	height: 20px;
+	background: rgba(200,50,80, 0.2)
+}
+
+p {
+	text-align: justify
+}
+
+p.lead {
+	margin-top: 20px;
+}
+
+dd {
+	margin-left: 1em;
+}
+
+.software {
+	font-family: monospace;
+}
+
+dt small:before { content: '\A'; }
+dt small { white-space:pre; font-weight: normal; }
+/* http://stackoverflow.com/a/11750985 */
