@@ -11,3 +11,5 @@
 a {
 	color: inherit;
 }
+
+abbr { border-bottom: none !important }

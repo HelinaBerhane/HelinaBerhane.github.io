@@ -10,15 +10,14 @@ body > header h1 {
 
 h1, h2, h3, h4, h5, h6 { font-style: italic; }
 
+address img { margin-bottom: 15px; }
+
 address ul {
 	list-style-type: none;
 	padding-left: 0;
 }
 
-.glyphicon {
-	margin-right: 4px;
-}
-
+.glyphicon { margin-right: 4px; }
 .glyphicon-blank::before {
 	content: "\2212";
 	visibility: hidden;
@@ -31,21 +30,13 @@ address ul {
 	background-repeat: no-repeat;
 }
 
-p {
-	text-align: justify
-}
+p { text-align: justify }
 
-p.lead {
-	margin-top: 20px;
-}
+p.lead { margin-top: 20px; }
 
-dd {
-	margin-left: 1em;
-}
+dd { margin-left: 1em; }
 
-.software {
-	font-family: monospace;
-}
+.software { font-family: monospace; }
 
 dt small:before { content: '\A'; }
 dt small { white-space:pre; font-weight: normal; }

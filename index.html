@@ -88,8 +88,8 @@
 			
 			<aside class="col-md-3 col-sm-4">
 				<h3>Contact Me</h3>
-				<address>
-					<div class="vcard">
+				<address class="vcard">
+					<a href="images/photo_original.jpg"><img class="photo img-responsive img-thumbnail" src="images/photo.jpg" /></a>
 					<span class="fn" style="display:none;">David Robertson</span>
 					<p class="adr">
 					  <span class="street-address">
@@ -107,18 +107,17 @@
 					
 					<p>
 					  <span class="glyphicon glyphicon-envelope"></span>
-					  <span class="email">d.m.robertson @ ncl</span>
+					  <span class="email">d.m.robertson@ncl.ac.uk</span>
 					</p>
 					<p>
 					  <span class="glyphicon glyphicon-earphone"></span> PhD 3, Herschel Building<br />
-					  <span class="glyphicon glyphicon-blank"></span> <span class="tel">Extension 88539</span>
+					  <span class="glyphicon glyphicon-blank"></span> Extension <span class="tel">88539</span>
 					</p>
 					
 					<ul>
 						<li><a class="url github" href="https://github.com/DMRobertson">DMRobertson</a></li>
 						<li id='download_cv'><span class="glyphicon glyphicon-download-alt"></span> <a href="https://www.dropbox.com/s/5f0pkhgiv462vk7/cv.pdf?dl=1">My CV</a></li>
 					</ul>
-					</div>
 				</address>
 				
 				<section id="responsibilties">
@@ -181,13 +180,26 @@
 	</div> <!-- /container -->
 	
 	<footer>
-	<a href="http://validator.w3.org/check?uri=https://www.students.ncl.ac.uk/d.m.robertson/">Validate me!</a>
 	</footer>
 	
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
 	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+	MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
+	  var VARIANT = MathJax.OutputJax["HTML-CSS"].FONTDATA.VARIANT;
+	  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
+	  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
+	  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
+	  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
+	});
+	MathJax.Hub.Register.StartupHook("SVG Jax Ready",function () {
+	  var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;
+	  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
+	  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
+	  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
+	  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
 	});
 	</script>
 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
