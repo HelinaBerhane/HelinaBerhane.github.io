@@ -1,7 +1,5 @@
 /*@import url(https://fonts.googleapis.com/css?family=Roboto:400italic,400,700); */
 
-body {font-family: sans-serif;}
-
 header h1 {
 	font-weight: bold;
 }
@@ -44,3 +42,7 @@ dd { margin-left: 1em; }
 dt small:before { content: '\A'; }
 dt small { white-space:pre; font-weight: normal; }
 /* http://stackoverflow.com/a/11750985 */
+
+aside ul {
+	padding-left: 20px;
+}
