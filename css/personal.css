@@ -15,7 +15,7 @@ address img { margin-bottom: 15px; }
 
 address ul {
 	list-style-type: none;
-	padding-left: 0;
+	padding-left: 0 !important;
 }
 
 .glyphicon { margin-right: 4px; }
