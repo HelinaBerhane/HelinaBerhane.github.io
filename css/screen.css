@@ -1,9 +1,11 @@
+.cv-only { display: none; }
+
 body {
-	background: rgb(239,235,234); 
+	background: rgb(239,235,234);
 }
 
-a, a:hover, a:focus { color: rgb(220,55,85); }
-a:hover, a:focus { text-decoration: underline; }
+a, a:hover, a:focus { color: rgb(220,55,85); text-decoration: inherit; }
+a[href]:hover, a[href]:focus { text-decoration: underline; }
 a:visited { color: #9E5765; }
 
 body > header {
