@@ -1,6 +1,6 @@
 /* Hide parts not needed for printing */
 
-.screen-only {display: none;}
+.screen-only { display: none; }
 
 #working_on,
 #about_research,
@@ -13,12 +13,25 @@ footer {
 	display: none;
 }
 
+#education dd { display: block; }
+
 /* style changes */
 
-header { text-align: center; font-variant: small-caps; }
+header {
+	text-align: center;
+	font-variant: small-caps;
+}
+
+body {
+	font-family: Georgia, "Lucida Bright", serif;
+}
 
 a { color: inherit; }
 
-abbr { border-bottom: none !important }
+abbr { border-bottom: none !important; }
 
-.img-thumbnail { border: 0; padding: 0; border-radius: 0; }
+.img-thumbnail {
+	border: 0;
+	padding: 0;
+	border-radius: 0;
+}
