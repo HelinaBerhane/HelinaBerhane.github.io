@@ -40,6 +40,8 @@ dt time { font-weight: normal; font-size: 90%; }
 
 .software { font-family: monospace; }
 
+var sub:last-child { padding-right: 0.25em; }
+
 dt small:before { content: '\A'; }
 dt small { white-space:pre; font-weight: normal; }
 /* http://stackoverflow.com/a/11750985 */
