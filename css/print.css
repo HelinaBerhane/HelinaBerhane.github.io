@@ -1,15 +1,37 @@
 /* Hide parts not needed for printing */
 
-#working_on, #about_research > *, #papers dd, #download_cv , #links, footer {
+.screen-only { display: none; }
+
+#working_on,
+#about_research,
+dd,
+#contact h3,
+#download_cv,
+#links,
+header h2,
+footer {
 	display: none;
 }
 
-#about_research .lead {
-	display: block;
+#education dd { display: block; }
+
+/* style changes */
+
+header {
+	text-align: center;
+	font-variant: small-caps;
 }
 
-a {
-	color: inherit;
+body {
+	font-family: Georgia, "Lucida Bright", serif;
 }
 
-abbr { border-bottom: none !important }
+a { color: inherit; }
+
+abbr { border-bottom: none !important; }
+
+.img-thumbnail {
+	border: 0;
+	padding: 0;
+	border-radius: 0;
+}

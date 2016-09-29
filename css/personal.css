@@ -26,16 +26,17 @@ address ul {
 
 .github {
 	padding-left: 22px;
-	background: url('../images/github.png');
-	background-size: 16px 16px;
-	background-repeat: no-repeat;
+	background: url('../images/github.png') !important; /* need important to remain when printed */
+	background-size: 16px 16px  !important;
+	background-repeat: no-repeat !important;
 }
 
 p { text-align: justify }
 
 p.lead { margin-top: 20px; }
 
-dd { margin-left: 1em; }
+dd { margin-left: 1em; margin-bottom: 0.25em; }
+dt time { font-weight: normal; font-size: 90%; }
 
 .software { font-family: monospace; }
 
