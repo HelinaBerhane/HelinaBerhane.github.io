@@ -1,5 +1,3 @@
-/*@import url(https://fonts.googleapis.com/css?family=Roboto:400italic,400,700); */
-
 header h1 {
 	font-weight: bold;
 }
@@ -11,7 +9,7 @@ header h1, header h2 {
 
 h1, h2, h3, h4, h5, h6 { font-style: italic; }
 
-address img { margin-bottom: 15px; }
+address img { margin-bottom: 1em; }
 
 address ul {
 	list-style-type: none;
