@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 		<meta name="author" content="David Robertson" />
-		<link rel="amphtml" href="index.amp.html">
+		<link rel="canonical" href="index.html" />
 		<link rel="icon" href="http://ncl.ac.uk/favicon.ico" />
 
 		<title>David M. Robertson</title>
 
-		<!-- Bootstrap core CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/personal.css" />
-		<link rel="stylesheet" href="css/print.css"  media="print"  />
-		<link rel="stylesheet" href="css/screen.css" media="screen" />
+		<style amp-custom>
+		html { font-family: sans-serif; background: rgb(239,235,234); }
+		a, a:hover, a:focus { color: rgb(220,55,85); text-decoration: inherit; }
+		[href]:hover, a[href]:focus { text-decoration: underline; }
+		a:visited { color: #9E5765; }
+		header { background: rgb(200,50,80); color: #eee; text-align: center; padding: 0.3em; }
+		header h1 { margin: 0; }
+		header h2 { margin: 0; color: #ddd; }
+		footer { height: 20px; background: rgba(200,50,80, 0.2); }
+		address img { margin-bottom: 1em; }
+		main, aside { padding: 0.5em; text-align: justify; }
+		.lead { font-size: 120%; font-weight: bold; margin-top: 0.3em;}
+		dt { font-weight: bold; }
+		.icon { font-style: normal; }
+		dt time { font-weight: normal; font-size: 90%; }
+		.software { font-family: monospace; }
+		var sub:last-child { padding-right: 0.2em; }
+		</style>
 		
 		<!-- Mobile browser integration-->
 		<!-- Chrome, Firefox OS and Opera -->
@@ -25,21 +37,19 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		
-		<!-- HTML5 shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<!--amp boilerplate-->
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
 	</head>
 	<body>
 		<header>
 			<div class="container">
-				<h1>David M<span class="cv-only">atthew</span><span class="screen-only">.</span> Robertson <small class="cv-only">MMath</small></h1>
+				<h1>David M. Robertson</h1>
 				<h2>PhD Research Student</h2>
 			</div>
 		</header>
-
-			<div class="container">
+		
+		<div class="container">
 			<main class="col-md-9 col-sm-8">
 				<section id="about_research">
 					<!--h2>About my research</h2-->
@@ -53,34 +63,11 @@
 					</ul>
 					Outside of maths, I maintain a keen interest in computers and programming. I particularly enjoy tinkering with <a href="https://www.python.org/">Python</a> language, though I'm keen to learn more of&nbsp;<a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a href="http://julialang.org/">Julia</a> and&nbsp;<a href="https://www.rust-lang.org/">Rust</a>.
 				</section>
-
+				
 				<section id="working_on">
 					<h3>What I'm working on</h3>
 					<p><a href="https://www.dpmms.cam.ac.uk/~nb443">Nathan Barker</a>, <a href="http://www.mas.ncl.ac.uk/~najd2/">Andrew Duncan</a> and myself have <a href="http://arxiv.org/abs/1503.01032">submitted a paper</a> which describes an algorithm to solve the power conjugacy problem in the <a href="http://en.wikipedia.org/wiki/Higman_group">Higman-Thompson groups</a>&nbsp;<var>G<sub>n,r</sub></var>. This paper builds on <a href="http://books.google.co.uk/books?id=LPvuAAAAMAAJ&amp;redir_esc=y">Higman's work on the conjugacy problem</a>.</p>
-
-					<!--figure>
-						<img class="img-responsive center-block" src="images/TreePair.svg" style="max-height:180px" alt="Two full, rooted binary trees with three leaves. The leaves of the first and second tree have different numberings." />
-						<img class="img-responsive center-block" src="images/Bijection.svg" style="max-height:375px" alt="The bijection of the interval corresponding to the tree pair above." />
-						<figcaption class="center-block">
-							<strong>Top:</strong> an automorphism of&nbsp;<var>V<sub>2,1</sub></var>.<br />
-							<strong>Bottom:</strong> the same automorphism represented as a bijection of the interval&nbsp;<var>[0,1]</var>.
-						</figcaption>
-					</figure-->
-
 					<p>As part of my contribution toward the paper, I have implemented the nitty-gritty details of this algorithm in a <a href="http://python.org">Python</a> package called <a class="software" href="https://github.com/DMRobertson/thompsons_v">thompson</a>. The package consists of two layers: a lower layer for working with the algebras <var>V<sub>n,r</sub></var>, and a higher layer for working with automorphisms of these algebras. For more information, see the <a href="https://github.com/DMRobertson/thompsons_v">GitHub repository</a>, <a href="http://thompsons-v.readthedocs.org/">the project documentation</a>, or <a href="http://arxiv.org/abs/1503.01032">the paper</a>.</p>
-
-				</section>
-				
-				<section id="education" class="cv-only">
-					<h3>Education</h3>
-					<dl>
-						<!--TODO: dt>PhD lol</dt -->
-
-						<dt><strong>Master of Mathematics</strong>, <a href="http://www.ncl.ac.uk/">Newcastle University</a>. <em>First Class Honours</em>. <time datetime="2014-07">July 2014</time>.</dt>
-						
-						<dt><strong>A-levels</strong>, <a href="https://www.stockton.ac.uk/">SRC Bede Sixth Form</a>. <time datetime="2010-08">August 2010</time>.</dt>
-						<dd>Mathematics: A*, Further Mathematics: A*, Physics: A*, Geography: A*</dd>
-					</dl>
 				</section>
 				
 				<section id="papers">
@@ -115,9 +102,9 @@
 				<section id="conferences">
 					<h3>Conference attendance</h3>
 					<dl>
-						<dt><a href="http://www.mas.ncl.ac.uk/~nser/NBGGT/"><abbr title="North British Geometric Group Theory">NBGGT</abbr></a>: <a href="http://www-groups.mcs.st-and.ac.uk/~colva/nbggt.html">Autumn 2017</a>. <time datetime="2016-11-09">9<sup>th</sup>&nbsp;November, 2016</time>.</dt>
+						<dt><a href="http://www.mas.ncl.ac.uk/~nser/NBGGT/"><abbr title="North British Geometric Group Theory">NBGGT</abbr></a>: <a href="http://www-groups.mcs.st-and.ac.uk/~colva/nbggt.html">Autumn 2017</a>. <time datetime="2016-11-09">9<sup>th</sup> November, 2016</time>.</dt>
 						<dd>Three talks; two discussing asymptotic behaviour in groups, and one discussing 'malcharacteristic subgroups'. Held at <a href="https://www.st-andrews.ac.uk/maths/">St Andrews University</a>.</dd>
-					
+						
 						<dt><a href="http://imada.sdu.dk/Research/GroupsAndAlgebras/Conferences/ThompsonGroups/">Workshop on the Thompson Groups</a>.
 							<time datetime="2016-08-15">15<sup>th</sup></time>&ndash;<time>17<sup>th</sup>&nbsp;August, 2016</time>.</dt>
 						<dd>A three day workshop held at <a title="University of Southern Denmark" href="http://imada.sdu.dk/Research/GroupsAndAlgebras/">Syddansk Universitet</a> in Odense, Denmark. The conference discussed recent research into the Thompsons groups, particularly into&nbsp;<var>F</var>.</dd>
@@ -125,7 +112,8 @@
 						<dt><a href="http://www.maths.dur.ac.uk/~dma0np/epsrc2013/workshop/gcompgcomp.html">Geometry and Computation on Groups and Complexes</a>.
 							<time datetime="2016-06-06">6<sup>th</sup></time>&ndash;<time datetime="2016-06-10">10<sup>th</sup>&nbsp;June, 2016</time>.</dt>
 						<dd>A week-long workshop held at <a href="http://www.ncl.ac.uk/maths/">Newcastle University</a>,&nbsp;UK. Topics include expander graphs, graph curvature, buildings, branch and hyperbolic groups.</dd>
-						<dt><a href="http://www.mas.ncl.ac.uk/~nser/NBGGT/">NBGGT</a>: <a href="http://www.macs.hw.ac.uk/~jim/generators2016.html">Spring 2016 #2</a>. <time datetime="2016-03-16">16<sup>th</sup>&nbsp;March, 2016</time>.</dt>
+						
+						<dt><a href="http://www.mas.ncl.ac.uk/~nser/NBGGT/"><abbr title="North British Geometric Group Theory">NBGGT</abbr></a>: <a href="http://www.macs.hw.ac.uk/~jim/generators2016.html">Spring 2016 #2</a>. <time datetime="2016-03-16">16<sup>th</sup>&nbsp;March, 2016</time>.</dt>
 						<dd>Three talks: one discussing dimensions of groups; the other two involving <abbr title="Right-angled Artin groups">RAAGs</abbr>. Held at <a href="https://www.hw.ac.uk/schools/mathematical-computer-sciences/index.htm">Heriot Watt University</a>.</dd>
 
 						<dt><a href="http://www.mas.ncl.ac.uk/~nser/NBGGT/">NBGGT</a>: <a href="http://www-groups.mcs.st-and.ac.uk/~colva/nbggt.html">Winter 2015</a>. <time datetime="2015-12-16">16<sup>th</sup>&nbsp;December, 2015</time>.</dt>
@@ -153,40 +141,26 @@
 				<section id="contact">
 					<h3>Contact Me</h3>
 					<address class="vcard">
-						<a href="images/photo_original.jpg">
-						<img class="photo img-responsive img-thumbnail" src="images/photo_head.jpg" srcset="images/photo_head.jpg 1x,images/photo_head_hires.jpg 2x" alt="Student profile photograph from March 2015" /></a>
+						<a href="images/photo_original.jpg"><amp-img layout="responsive" width="1817" height="1195" class="photo img-responsive img-thumbnail" srcset="images/photo_head.jpg 1x,images/photo_head_hires.jpg 2x" alt="Student profile photograph from March 2015" src="images/photo_head.jpg"></amp-img></a>
 						
-						<span class="fn" style="display:none;">David Robertson</span>
 						<p class="adr">
-						  <span class="street-address">
-							<span class="glyphicon glyphicon-pencil"></span>
-							<a href="http://www.ncl.ac.uk/maths/">School of Maths and Stats</a><br />
-							<span class="glyphicon glyphicon-blank"></span>
-							<a href="http://www.ncl.ac.uk/tour/academic/herschel-building/">Herschel Building</a><br />
-							<span class="glyphicon glyphicon-blank"></span>
-							<a href="http://www.ncl.ac.uk/">Newcastle University</a></span><br />
-						  <span class="glyphicon glyphicon-blank"></span>
-						  <span class="locality">Newcastle upon Tyne</span><br />
-						  <span class="glyphicon glyphicon-blank"></span>
-						  <span class="postal-code">NE1 7RU</span><br />
+							<span class="fn">David Robertson</span><br />
+							<span class="street-address">
+								<a href="http://www.ncl.ac.uk/maths/">School of Maths and Stats</a><br />
+								<a href="http://www.ncl.ac.uk/tour/academic/herschel-building/">Herschel Building</a><br />
+								<a href="http://www.ncl.ac.uk/">Newcastle University</a></span><br />
+							<span class="locality">Newcastle upon Tyne</span><br />
+							<span class="postal-code">NE1 7RU</span><br />
 						</p>
 
 						<p>
-							<span class="glyphicon glyphicon-envelope"></span>
-							<span class="email">d.m.robertson@ncl.ac.uk</span><br />
-							<span class="cv-only">
-								<span class="glyphicon glyphicon-earphone"></span>
-								<span class="tel">+44 7796 542202</span><br />
-							</span>
-							<span class="screen-only">
-								<span class="glyphicon glyphicon-earphone screen-only"></span> PhD 3, Herschel Building<br />
-								<span class="glyphicon glyphicon-blank screen-only"></span> Extension <span class="tel">88539</span>
-							</span>
+							<span class="icon">📧</span> <span class="email">d.m.robertson@ncl.ac.uk</span><br />
+							<span class="icon">📞</span> PhD 3, Herschel Building: Extension <span class="tel">88539</span>
 						</p>
 
-						<ul>
-							<li class="github">GitHub: <a class="url" href="https://github.com/DMRobertson">DMRobertson</a></li>
-						</ul>
+						<p>
+							<span class="github">GitHub: <a class="url" href="https://github.com/DMRobertson">DMRobertson</a></span>
+						</p>
 					</address>
 				</section>
 
