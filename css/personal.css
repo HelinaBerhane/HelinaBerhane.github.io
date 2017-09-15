@@ -47,3 +47,12 @@ dt small { white-space:pre; font-weight: normal; }
 aside ul {
 	padding-left: 20px;
 }
+
+abbr[title] {
+	/* Nicked from bootstrap 4 beta */
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+}
