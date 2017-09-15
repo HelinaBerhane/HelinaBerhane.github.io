@@ -26,6 +26,14 @@
 		dt time { font-weight: normal; font-size: 90%; }
 		.software { font-family: monospace; }
 		var sub:last-child { padding-right: 0.2em; }
+		abbr[title] {
+			/* Nicked from bootstrap 4 beta */
+			text-decoration: underline;
+			-webkit-text-decoration: underline dotted;
+			text-decoration: underline dotted;
+			cursor: help;
+			border-bottom: 0;
+		}
 		</style>
 		
 		<!-- Mobile browser integration-->
@@ -54,7 +62,7 @@
 				<section id="about_research">
 					<!--h2>About my research</h2-->
 					<p class="lead">In September 2014 I began a PhD in geometric group theory, under the supervision of <a href="http://www.mas.ncl.ac.uk/~najd2/">Dr.&nbsp;Andrew Duncan</a> and <a href="http://www.mas.ncl.ac.uk/~nser/">Prof.&nbsp;Sarah Rees</a>.</p>
-					<p>I'm planning to tackle the simultaneous conjugacy problem in <a href="https://en.wikipedia.org/wiki/Thompson_groups">Thompson's group</a>&nbsp;<var>V</var>. My mathematical interests are:</p>
+					<p>I'm studying the conjugacy problem and related topics in <a href="https://en.wikipedia.org/wiki/Thompson_groups">Thompson's groups</a>. My mathematical interests are:</p>
 					<ul>
 						<li><a href="http://en.wikipedia.org/wiki/Decision_problem">Decision problems in group theory</a></li>
 						<li>The extended family of <a href="http://en.wikipedia.org/wiki/Thompson_groups">Thompson-like groups</a></li>
@@ -66,8 +74,10 @@
 				
 				<section id="working_on">
 					<h3>What I'm working on</h3>
-					<p><a href="https://www.dpmms.cam.ac.uk/~nb443">Nathan Barker</a>, <a href="http://www.mas.ncl.ac.uk/~najd2/">Andrew Duncan</a> and myself have <a href="http://arxiv.org/abs/1503.01032">submitted a paper</a> which describes an algorithm to solve the power conjugacy problem in the <a href="http://en.wikipedia.org/wiki/Higman_group">Higman-Thompson groups</a>&nbsp;<var>G<sub>n,r</sub></var>. This paper builds on <a href="http://books.google.co.uk/books?id=LPvuAAAAMAAJ&amp;redir_esc=y">Higman's work on the conjugacy problem</a>.</p>
-					<p>As part of my contribution toward the paper, I have implemented the nitty-gritty details of this algorithm in a <a href="http://python.org">Python</a> package called <a class="software" href="https://github.com/DMRobertson/thompsons_v">thompson</a>. The package consists of two layers: a lower layer for working with the algebras <var>V<sub>n,r</sub></var>, and a higher layer for working with automorphisms of these algebras. For more information, see the <a href="https://github.com/DMRobertson/thompsons_v">GitHub repository</a>, <a href="http://thompsons-v.readthedocs.org/">the project documentation</a>, or <a href="http://arxiv.org/abs/1503.01032">the paper</a>.</p>
+					<p>Finishing my PhD project and writing a thesis.
+					The tentative title is <em>Conjugacy and centralisers in Thompson's group <var>T</var></em>.
+					In doing so, I use the <a class="software" href="https://github.com/DMRobertson/thompsons_v">thompson</a> package for <a href="http://python.org">Python</a>, which I continue to maintain.
+					</p>
 				</section>
 				
 				<section id="papers">
@@ -174,11 +184,22 @@
 					</address>
 				</section>
 
+				<section id="teaching">
+				<h3>Teaching</h3>
+				Current:
+				<ul>
+					<li><a href="https://www.ncl.ac.uk/module-catalogue/module.php?code=MAS3704">Coding theory</a></li>
+				</ul>
+				Previous:
+				<ul>
+					<li><a href="downloads/introduction_to_python/slides.html">Introduction to Python</a></li>
+				</ul>
+				</section>
+
 				<section id="responsibilties">
 					<h3>Responsibilities</h3>
 					<ul>
-						<li>Wrote and delivered material introduction programming to students</li>
-						<li>Presenteed an informal seminar series</li>
+						<li>Presented an informal seminar series</li>
 						<li>Former <a href="http://www.ncl.ac.uk/students/mathsaid/">MathsAid</a> tutor</li>
 						<li>Marker, demonstrator and invigliator for various modules</li>
 					</ul>
@@ -191,7 +212,7 @@
 						<li><a href="http://maths-magic.ac.uk/course.php?id=394">Commutative Algebra</a></li>
 						<li><a href="http://maths-magic.ac.uk/course.php?id=334">Representation Theory of Groups </a></li>
 						<li><a href="http://maths-magic.ac.uk/course.php?id=331">Lie groups and Lie algebras</a></li>
-						<li>Introductory course on expander graph families</li>
+						<li><a href="https://sites.google.com/site/expanderseverywhere/speakers">Expander graph families</a></li>
 					</ul>
 				</section>
 
@@ -219,15 +240,6 @@
 						<li><a href="http://mirrors.ctan.org/graphics/pgf/contrib/tikz-cd/tikz-cd-doc.pdf">Commutative diagrams</a></li>
 						<li><a href="http://mirrors.ctan.org/graphics/pgf/contrib/tikz-3dplot/tikz-3dplot_documentation.pdf">3D Plots</a></li>
 					</ul>
-
-					<!--p>Here are some TikZ drawings that I'm quite proud of.</p>
-					<ul>
-						<li><a href="downloads/tikz/gluing_a_cylinder.pdf">Gluing a cylinder</a> to a topological space.</li>
-						<li><a href="downloads/tikz/collapsing_to_wedge.pdf">Collapsing a spanning tree</a> so that the graph becomes a wedge of circles.</li>
-						<li><a href="downloads/tikz/baumslag_solitar_uct.pdf">The Bass-Serre tree for <var>BS(1, 2)</var></a>.</li>
-						<li><a href="downloads/tikz/tripod.pdf">Explaining a substep in a proof</a>.</li>
-
-					</ul-->
 
 					<h4>Python</h4>
 					<ul>
