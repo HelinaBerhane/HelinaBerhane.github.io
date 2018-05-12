@@ -2,7 +2,7 @@
 
 body {
 	background: rgb(239,235,234);
-	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial , sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 a, a:hover, a:focus { color: rgb(220,55,85); text-decoration: inherit; }
@@ -18,6 +18,13 @@ header h2 { color: #ddd; }
 
 body > .container {
 	background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (min-width: 768px) {
+	body > .container {
+		box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+		clip-path: inset(0px -10px 0px -10px);
+	}
 }
 
 figure {

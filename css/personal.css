@@ -29,9 +29,9 @@ address ul {
 	background-repeat: no-repeat !important;
 }
 
-p { text-align: justify }
+p, dd { text-align: justify; }
 
-p.lead { margin-top: 20px; }
+p.lead { margin-top: 20px; font-weight: normal; text-align: left; }
 
 dd { margin-left: 1em; margin-bottom: 0.25em; }
 dt time { font-weight: normal; font-size: 90%; }
