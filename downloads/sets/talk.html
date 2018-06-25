@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>reveal.js presentation</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/black.min.css" />
+<link rel="stylesheet" href="style_tweaks.css" />
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+<section>
+<h1>{ The joy | of sets }</h1>
+<h5>Woah, your set is on fire</h5>
+<h5>Let&#x27;s talk about sets, baby</h5>
+<h5>Set Bomb</h5>
+<h5>The Kamasetra</h5>
+
+</section>
+</section>
+<section>
+<section data-background-image="media/storage.jpg">
+<h1>Everyone needs a data structure</h1>
+
+</section>
+<section>
+<h2>Choose the right structure for the job</h2>
+<ul>
+<li class="fragment">Vectors $(x, y, z)$, matrices $\begin{pmatrix}a &amp; b \\ c &amp; d\end{pmatrix}$, $n$-dim. arrays</li>
+<li class="fragment">Functions $A \to B$ <em>(hashmaps/dictionaries)</em></li>
+<li class="fragment">Graphs <img data-src="media/petersen.svg" title="The Petersen graph" alt="A drawing of the Petersen graph in the plane"> <em>(weights, labels?)</em></li>
+<li class="fragment">Extendable lists <em>(programmer&#x27;s array)</em></li>
+<li class="fragment">Database?</li>
+</ul>
+
+</section>
+<section>
+<h2>Then choose an implementation</h2>
+<p>Example: programmers&#x27; lists
+</p>
+<ul>
+<li class="fragment">Array  <em>(dynamic?)</em></li>
+<li class="fragment"><img data-src="media/array.png" title="An array" alt="Sketch of an array"></li>
+<li class="fragment">Linked list <em>(doubled?)</em></li>
+<li class="fragment"><img data-src="media/linked.png" title="A singly-linked list" alt="Sketch of a singly-linked list"></li>
+</ul>
+<p>Trade-offs; depends on use-case
+</p>
+
+</section>
+<section>
+<h2>A data structure for mathematics?</h2>
+<ul>
+<li class="fragment">Simple</li>
+<li class="fragment">Expressive</li>
+<li class="fragment">Consistent</li>
+<li class="fragment">Explicit <em>(no hand-waving)</em></li>
+<li class="fragment">Handles infinity <em>(infinities?)</em></li>
+</ul>
+<p>What trade-offs will we need to consider?
+</p>
+
+</section>
+</section>
+<section>
+<section data-background-image="media/question.jpg">
+<h1>What is a set, anyway?</h1>
+
+</section>
+<section>
+<p>Easy to write down examples:
+</p>
+<ul>
+<li class="fragment">$\{1, 2, 3\}$, $\{ \text{red}, \text{white}, \text{blue} \}$</li>
+<li class="fragment">$\mathbb{N} = \{1, 2, 3, 4, \dotsc\}$ <em>(naughty)</em></li>
+<li class="fragment">$\{ \text{humans}\ h \mid h\ \text{was born in 1992} \} \ni \text{me}$</li>
+<li class="fragment">$\{ \text{continuous functions}\ f \colon \mathbb{R} \to \mathbb{R} \}$</li>
+</ul>
+<p>Hard to define a set precisely!
+</p>
+
+</section>
+<section>
+<h2>Cantor&#x27;s definition</h2>
+<blockquote>
+<p>By an ‘aggregate’ <em>(Menge)</em> we are to understand any collection into a whole $M$ of definite and separate objects $m$ of our intuition or thought. These objects are called the ‘elements’ of $M$.
+</p>
+</blockquote>
+<ul>
+<li class="fragment">Simple ✔, Explicit ✗</li>
+</ul>
+
+</section>
+<section>
+<h2>Another definition</h2>
+<ul>
+<li class="fragment">A set $S$ is something for which we can decide if any object $s$ belongs to $S$. <em>&quot;S has decidable membership&quot;</em></li>
+<li class="fragment">Simple ✔, Explicit ✗ <em>Decide?</em> <em>Object?</em></li>
+</ul>
+
+</section>
+</section>
+<section>
+<section data-background-image="media/lego.jpg">
+<h1>Simple bricks build complex houses</h1>
+
+</section>
+<section>
+<h2>Can we describe everything using sets?</h2>
+<p>Sets are unordered: $\{x, y\} = \{y, x\}$.
+</p>
+<p>What if we want tuples, where $(x, y) \neq (y, x)$?
+</p>
+<ul>
+<li class="fragment">Kurtowski <strong>defined</strong> $(x, y)$ to be the set $\{ \{x \}, \{x, y\} \}$.</li>
+<li class="fragment">Check that $(a, b) = (c, d)$ iff $a = c$ and $b = d$.</li>
+<li class="fragment">Extends recursively to $$(x_1, \dotsc, x_n) = \{ (x_1, \dotsc, x_{n-1}), \{x_1, \dotsc, x_n\} \}.$$</li>
+</ul>
+
+</section>
+<section>
+<h2>How can we use sets to count?</h2>
+<ul>
+<li class="fragment">Define $0 = \{ \, \} = \emptyset$.</li>
+<li class="fragment">Define $1 = \{ 0 \} = \{ \{ \} \} = \{\emptyset\}$. <em>(note $1 \neq 0$, a good sign!)</em></li>
+<li class="fragment">Define $2 = \{ 0, 1 \} = \{ \emptyset, \{ \emptyset \} \}$.</li>
+<li class="fragment">Recursively define $n = \{0, \dotsc, n-1 \}$.</li>
+</ul>
+<p>This generalises to <strong>ordinal numbers</strong>, which classify &quot;well-ordered sets&quot;.
+</p>
+<ul>
+<li class="fragment"><img data-src="media/omega+omega.png" title="A set with order type omega + omega" alt="A set with order type omega + omega"></li>
+</ul>
+
+</section>
+<section>
+<h3>Why even bother?</h3>
+<ul>
+<li class="fragment">Fewer assumptions and primitives to worry about.</li>
+<li class="fragment">If sets are logically consistent, so is anything built out of them.</li>
+</ul>
+<h3>On the other hand:</h3>
+<ul>
+<li class="fragment">Would never implement a list or number like this on a computer!</li>
+<li class="fragment">Theoretical, for reassurance</li>
+</ul>
+
+</section>
+<section>
+<h2>Forget about the bricks</h2>
+<p>Constructing things using sets is mostly academic.
+</p>
+<ul>
+<li class="fragment">Nobody literally thinks of $4$ as $\{ \emptyset, \{ \emptyset \}, \{\emptyset, \{\emptyset\}\}, \{\emptyset, \{\emptyset\}, \{\emptyset, \{\emptyset\}\}\} \}$!</li>
+<li class="fragment">What matters are the properties of $4$</li>
+<li class="fragment"><p>C.f. object-oriented programming: classes versus interfaces
+</p>
+</li>
+<li class="fragment"><strong>Punchline:</strong> any foundation of maths is fine, as long as it&#x27;s expressive and consistent.</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section data-background-iframe="https://www.youtube-nocookie.com/embed/On1CsbTwlDs?rel=0&amp;controls=0&amp;showinfo=0;start=205;autoplay=1">
+<h1>What could possibly go wrong?</h1>
+
+</section>
+<section>
+<h2>Russell&#x27;s paradox</h2>
+<p>A simple (naive) definition of a set causes problems.
+</p>
+<ol start="1">
+<li class="fragment">Let $V$ be the set $V = \{ \text{sets}\ x \mid x \notin x\}$.</li>
+<li class="fragment">If $V \in V$, then $V \notin V$.</li>
+<li class="fragment">Else $V \notin V$, and then $\neg(V \notin V)$, i.e. $V \in V$.</li>
+<li class="fragment">Thus $V \in V \iff V \notin V$.</li>
+<li class="fragment">😕</li>
+</ol>
+
+</section>
+<section>
+<h2>Uh-oh!</h2>
+<p>A statement can&#x27;t be true and false at the same time.
+</p>
+<p>What could be wrong with our logic?
+Options:
+</p>
+<ul>
+<li class="fragment">Maybe $V = \{ \text{sets}\ x \mid x \notin x \}$ isn&#x27;t a set?</li>
+<li class="fragment">Maybe $x \in x$ doesn&#x27;t make logical sense?</li>
+<li class="fragment">Maybe logic is wrong: $\neg(V \notin V) ⇏ V \in V?$</li>
+</ul>
+
+</section>
+<section>
+<h2>Solution: axioms (paranoia)</h2>
+<p>Specify how sets should behave.
+Some highlights:
+</p>
+<ol start="1">
+<li class="fragment">If $S$ is a set, so too is $\{ s \in S \mid s\ \text{has property}\ P\}$.</li>
+<li class="fragment">Power sets $\mathcal{P}(X) = \{ \text{sets}\ U \mid U \subseteq X \}$ exist.</li>
+<li class="fragment">Infinite sets exist; unions exist.</li>
+</ol>
+<p>All together there are eight <strong>ZF axioms</strong>.
+</p>
+
+</section>
+<section>
+<h2>Consequence: there is no set of all sets</h2>
+<ul>
+<li class="fragment">Suppose there were such a set $U$.</li>
+<li class="fragment">$V = \{ x \in U \mid x \notin x \}$ is a set, by axiom 1 above.</li>
+<li class="fragment">$\to$ Russell&#x27;s Paradox $\to$ 😞 $\to$ contradiction.</li>
+</ul>
+<p>Workaround: use a different word.
+</p>
+<ul>
+<li class="fragment">e.g. the <strong>class</strong>, <strong>family</strong> or <strong>collection</strong> of all sets</li>
+</ul>
+
+</section>
+<section>
+<h2>The axiom of choice</h2>
+<p>A scary 9th axiom on top of ZF.
+</p>
+<blockquote>
+<p>Let $\{S_i\}_{i \in I}$ be nonempty sets indexed by $I$.
+Then we can choose an element $x_i \in S_i$ for each $i \in I$.
+</p>
+</blockquote>
+<p>What does &quot;<strong>choose</strong>&quot; mean when $I$ or $S_i$ is infinite?
+</p>
+<ul>
+<li class="fragment">If you give me sets $N_i \subseteq \mathbb{N}$ of natural numbers,</li>
+<li class="fragment">I can specify $x_i \in N_i$ by saying $x_i = \min N_i$.</li>
+</ul>
+
+</section>
+<section>
+<p>The axiom of choice (AC) is powerful, but gives nonconstructive proofs.
+</p>
+<ul>
+<li class="fragment">If I give you sets $R_i \subseteq \mathbb{R}$ of <strong>real</strong> numbers,</li>
+<li class="fragment">Can you give a recipe for selecting an $x_i \in R_i$?</li>
+<li class="fragment">Can&#x27;t say min/max, e.g. $R_i = \{ x \in \mathbb{R} \mid x &gt; 0 \}$.</li>
+</ul>
+<p>AC tells us something exists, but not how to find it.
+</p>
+
+</section>
+<section>
+<h2>What&#x27;s the problem?</h2>
+<p>AC implies or <a href="https://en.wikipedia.org/wiki/Axiom_of_choice#Equivalents">is equivalent to</a> many reasonable, and many unreasonable statements.
+</p>
+<ul>
+<li class="fragment">Every vector space has a basis.</li>
+<li class="fragment">A sphere can be broken down into two spheres of the same volume. <em>(Banach-Tarski paradox)</em></li>
+<li class="fragment">Any product (even infinite) of compact spaces is compact. <em>(Tychonoff&#x27;s Theorem)</em></li>
+</ul>
+<p>AC is used begrudgingly and with suspicion.
+</p>
+
+</section>
+</section>
+<section>
+<section data-background-image="media/alternatives.jpg">
+<h1>Are there any alternatives?</h1>
+
+</section>
+<section>
+<ul>
+<li class="fragment">Categories: &quot;functions are more important than sets&quot;</li>
+<li class="fragment">[Homotopy] type theory <em>(programming languages)</em></li>
+<li class="fragment">Constructive mathematics:</li>
+<ul>
+<li class="fragment">&quot;there must exist an $x$ because...&quot;</li>
+<li class="fragment">&quot;we can build such an $x$ by...&quot;</li>
+</ul>
+<li class="fragment"><strong>Metamathematics</strong>: model theory, proof theory, reverse mathematics <em>(philosophy?)</em></li>
+<li class="fragment">Formal methods; automated theorem proving?</li>
+</ul>
+
+</section>
+<section>
+<h2>Fuzzy set theory</h2>
+<p>Any object $x$ either does or does not belong to a set $V.$
+</p>
+<p>Membership is binary: true or false.
+</p>
+<ul>
+<li class="fragment">A <strong>fuzzy set</strong> $U$ assigns a number $0 \leq \mu_A(x) \leq 1$ to each object $x$. <em>(&quot;how much&quot; is $x$ contained in $A$?)</em></li>
+<li class="fragment">Clasically: $x \in A \leftrightarrow \mu_A(x) = 1$ and $x \notin A \leftrightarrow \mu_A(x) = 0$.</li>
+<li class="fragment">True/false replaced with a &quot;degree of belief&quot;</li>
+</ul>
+
+</section>
+<section>
+<h2>Hot fuzz</h2>
+<p>Can define unions, intersections and complements of fuzzy sets which take into account the fuzziness described by $\mu_A$.
+</p>
+<ul>
+<li class="fragment"><a href="https://en.wikipedia.org/wiki/Fuzzy_control_system">Fuzzy control systems</a>, for automation that needs more than just ON/OFF outputs</li>
+<li class="fragment">Sendai railway in Japan;  other industrial applications to improve efficiency</li>
+<li class="fragment">Useful in AI?</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section data-background-image="media/bored.jpg">
+<h1>tl;dr: Sets</h1>
+<ul>
+<li class="fragment">data structure for mathematics</li>
+<li class="fragment">more complicated than you might think</li>
+<li class="fragment">naive definition has problems (Russell&#x27;s paradox)</li>
+<li class="fragment">formal axiomatisation—with controversy (AC)</li>
+<li class="fragment">sets work well, but there are alternatives</li>
+</ul>
+
+</section>
+</section>
+<section>
+<h1>Danke schön!</h1>
+
+</section>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"></script>
+<script>
+	Reveal.initialize({
+		history: true,
+		math: {
+			katexScript: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js',
+			katexStylesheet: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css',
+		},
+		dependencies: [
+			{ src: 'math-katex.js', async: true }
+		],
+	});
+</script>
+</body>
+</html>
