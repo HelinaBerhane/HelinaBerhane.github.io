@@ -44,3 +44,22 @@ footer {
 	height: 20px;
 	background: rgba(200,50,80, 0.2);
 }
+
+.email a {
+	font-size: 95%;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(
+		to right,
+		rgba(200,50,80, 0),
+		rgba(200,50,80, 0.4) 10%,
+		rgba(200,50,80, 0.5),
+		rgba(200,50,80, 0.4) 90%,
+		rgba(200,50,80, 0)
+	);
+	margin-left: 5%;
+	margin-right: 5%;
+}
