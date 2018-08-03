@@ -20,12 +20,15 @@ address ul {
 	visibility: hidden;
 }
 
-.github {
+.github, .linkedin {
 	padding-left: 22px;
-	background: url('../images/github.png') !important; /* need important to remain when printed */
 	background-size: 16px 16px  !important;
 	background-repeat: no-repeat !important;
 }
+
+.linkedin { background-image: url('../images/linkedin.png') !important; }
+.github { background-image: url('../images/github.png') !important; } 
+/* need important to remain when printed */
 
 p, dd { text-align: justify; }
 
