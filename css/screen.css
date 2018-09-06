@@ -45,7 +45,11 @@ footer {
 	background: rgba(200,50,80, 0.2);
 }
 
-.email a {
+address .fn {
+	display: none;
+}
+
+address .email {
 	font-size: 90%;
 }
 
