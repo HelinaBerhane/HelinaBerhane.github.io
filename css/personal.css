@@ -14,12 +14,6 @@ address ul {
 	padding-left: 0 !important;
 }
 
-.glyphicon { margin-right: 4px; }
-.glyphicon-blank::before {
-	content: "\2212";
-	visibility: hidden;
-}
-
 .github, .linkedin {
 	padding-left: 22px;
 	background-size: 16px 16px  !important;
