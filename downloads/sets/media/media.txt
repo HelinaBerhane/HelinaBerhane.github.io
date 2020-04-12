@@ -1,5 +1,0 @@
-storage.jpg: https://media.defense.gov/2016/Oct/06/2001644737/-1/-1/0/161004-F-YG094-0002.JPG
-lego.jpg https://www.flickr.com/photos/brickset/35109269935/in/album-72157681724507783/ CC-BY 2.0
-bored.jpg https://pixabay.com/en/man-face-look-boredom-bored-272675/ cc0
-question.jpg https://pixabay.com/en/question-mark-important-sign-1872634/
-alternatives.jpg https://pixabay.com/en/doors-choices-choose-open-decision-1767563/
